@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-3 百度首页 dom 布局  css hack</title>
+	<link rel="stylesheet" href="css/baidu-index.css"/>
+	<link rel="stylesheet" href="css/test.css"/>
+</head>
+<body>
+	<div class="wrapper test-bd">
+		<div class="top-menu test-bd">
+			<a href="http://news.baidu.com" class="mnav">新闻</a>
+			<a href="http://www.hao123.com" >hao123</a>
+			<a href="http://map.baidu.com" >地图</a>
+			<a href="http://v.baidu.com" >视频</a>
+			<a href="http://tieba.baidu.com" >贴吧</a>
+			<a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F" onclick="return false;">登录</a>
+			<a href="http://www.baidu.com/gaoji/preferences.html" >设置</a>
+
+			<a class="more" href="#">更多产品</a>
+
+			<!-- 更多产品侧边栏 -->
+			<div class="more-product" id="moreProduct">
+				<ul>
+					<li class="li-one">
+						<a href="javascript:;" >更多产品</a>
+					</li>
+					<li class="li-two">
+						<a href="http://www.nuomi.com/?cid=002540"><i></i>糯米</a>
+					</li>
+					<li class="li-three">
+						<a href="http://zhidao.baidu.com"><i></i>知道</a>
+					</li>
+					<li class="li-four">
+						<a href="http://music.baidu.com"><i></i>音乐</a>
+					</li>
+					<li class="li-five">
+						<a href="http://image.baidu.com"><i></i>图片</a>
+					</li>
+					<li class="li-six">
+						<a href="http://wenku.baidu.com"><i></i>文库</a>
+					</li>
+					<li class="li-seven">
+						<a href="http://top.baidu.com"><i></i>风云榜</a>
+					</li>
+					<li class="li-eight">
+						<a href="http://e.baidu.com/?refer=888"><i></i>百度推广</a>
+					</li>
+					<li>
+						<a href="//www.baidu.com/more/">全部产品>></a>
+					</li>
+				</ul>
+			</div>
+			<!-- end 更多产品侧边栏 -->
+			<div class="setting-menu">
+				<a href="javascript:;">搜索设置</a>
+				<a href="javascript:;">高级搜索</a>
+				<a href="javascript:;">关闭预测</a>
+				<a href="javascript:;">搜索历史</a>
+			</div>
+		</div>
+		<div class="main-1-box">
+			<div class="main-1">
+				<div>
+					<img src="img/bd_logo1.png" alt=""/>
+				</div>
+				<form>
+					<!-- <p class="desc">坑爹的事，行内块元素横向并列时会有间距，结果竟是因为dom换行引起的，两个span要连着写，不能换行。</p> 试试letter-space -->
+					<span href="" class="search-box"><input type="text"></span><span href="" class="search-btn"><input type="submit" value="百度一下"/></span>
+				</form>
+			</div>
+		</div>
+		<div class="footer-1">
+			<div class="footer-content">
+				<p>这里演示横向居中解决方案，</p>
+				1. 当前元素定宽且小于父元素大宽度。使用margin: 0 auto;
+				2. 当前元素定宽且小于父元素大宽度。父元素使用text-align:center;
+			</div>
+		</div>
+		<!-- <div class="footer-2">
+			<span class="footer-content">
+				这里演示横向居中解决方案，
+				1. 当前元素定宽且小于父元素大宽度。使用margin: 0 auto;
+				2. 当前元素定宽且小于父元素大宽度。父元素使用text-align:center; IE8，标准浏览器中，这个属性只能作用于 行内元素和行内块元素。其实这个属性本身的定义就是针对标准流中的行内元素的。
+
+				第二个技术点，让节点离底部20px，绝对定位
+				解：绝对定位的元素宽度默认为内容宽度。导致上面的横向居中方案失效，解决方法，设置父节点width 100%；
+			</span>
+		</div> -->
+	</div>
+</body>
+</html>

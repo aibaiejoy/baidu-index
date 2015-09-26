@@ -1,0 +1,325 @@
+html, body{
+    height: 100%;
+}
+body{
+    font: 12px arial;
+    text-align: ;
+    background: #fff;
+    position: relative;
+}
+form {
+    margin: 22px auto 0;
+    text-align: left;
+    z-index: 100;
+}
+input {
+    border: 0;
+    padding: 0;
+}
+body, p, form, ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.wrapper{
+    height:100%;  /* 这里如果想达到高度100%的效果，需要html,body{height:100%;才能实现}  */
+    min-height: 500px;
+    position: absolute;
+    width:100%;
+}
+/*  margin 合并和折叠 解决方案
+    顶部导航 top-menu的margin-top:5px; 会导致margin折叠的问题。
+    因为wrapper 的高度是100%，根据conten-box的计算，导致内容高度会比容器高度多出5px，导致滚动条出现。
+
+    给父元素添加>=1px的边框可以解决，但是又会出现1px的多余，同样有滚动条;
+
+    给父元素添加overflow可以解决。
+ */
+.top-menu{
+    border: 1px solid #ccc;
+    height: 30px;
+    text-align: right;
+    margin: 5px 0 5px 0;
+    padding: 14px 96px 0 0;
+    position: relative;
+}
+.top-menu .ul{
+    
+}
+.top-menu > a{
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.top-menu > a.more{
+    color: white;
+    background: #38f;
+    width:60px;
+    text-align: center;
+    text-decoration: none;
+}
+/*
+* 更多产品侧边栏
+*/
+.more-product{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*height: 100%;*/
+    width: 76px;
+    border-left: 1px solid #ddd;
+    background-color: #f9f9f9;
+    /*display: none;*/
+}
+
+.more-product ul{
+    padding: 0 5px 0 5px;
+    min-height: 600px;
+    overflow: auto;
+}
+
+.more-product li{
+    position: relative;
+    height: 70px;
+    text-align: center;
+    border-bottom: #f0f0f0 1px solid;
+}
+
+.more-product li a{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 50px;
+    left: 5px;
+    top: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #666;
+    white-space: nowrap;
+}
+
+.more-product li a:hover{
+    text-decoration: underline;
+}
+
+.more-product li i{
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background: url("../img/bdbri_icons.png") no-repeat;
+}
+
+.more-product li.li-one{
+    height: 50px;
+}
+
+.more-product li.li-one a{
+    height: 50px;
+    line-height: 50px;
+    top: 0;
+}
+
+.more-product li.li-three i{
+    background-position: -36px 0;
+}
+
+.more-product li.li-four i{
+    background-position: -72px 0;
+    width: 40px;
+}
+
+.more-product li.li-five i{
+    background-position: -112px 0;
+    width: 32px;
+}
+
+.more-product li.li-six i{
+    background-position: -146px 0;
+}
+
+.more-product li.li-seven i{
+    background-position: -183px 0;
+}
+
+.more-product li.li-eight i{
+    background-position: -220px 0;
+}
+
+/* 中间logo ，搜索框*/
+.main-1{
+    margin: 0 auto;
+    width:660px;
+    text-align: center;
+}
+.main-1 form{
+    text-align: left;
+    display: block;
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+    position: relative;
+}
+.main-1 img{width:270px; height: 129px;}
+.main-1 .search-box{
+    /*width:539px;
+    display: inline-block;
+    height: 34px;
+    border:1px solid #ccc;
+    vertical-align: top;*/
+    position: relative;
+    border: 1px solid #b6b6b6;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    height: 34px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+
+
+}
+.main-1 .search-box:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+.main-1-box{
+    position: relative;
+    top: 38.2%;
+}
+.main-1{
+    position: relative;
+    top: -191px;
+}
+.search-box input{
+    width: 526px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px\9;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+
+
+}
+.search-btn{
+    display: inline-block;
+    z-index: 0;
+    vertical-align: top;
+    border-bottom: 1px solid transparent;
+}
+.search-btn input{
+    /*border: 1px solid #ccc;
+    width:100px;
+    height: 36px;*/
+    color:#000\0; /*IE8*/
+    color:#000\9; /*ie6,ie7,ie8*/ 
+    *color:#000;/*ie7*/ 
+    _color:#000;/*ie6*/ 
+
+    width: 95px;
+    height: 32px;
+    padding-top: 2px\9;  
+    font-size: 14px;
+    background-color: #ddd;
+    cursor: pointer;
+
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+/*div块级元素，默认宽度100%*/
+.footer-1{
+    height: 80px;
+    /*这里的绝对定位要把直接父元素设置成相对定位*/
+    position: absolute;
+    width:100%; /*绝对定位会导致元素宽度变成内容宽度，这里恢复一下*/
+    bottom: 20px;
+}
+
+.footer-1 .footer-content{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*div块级元素，默认宽度100%*/
+.footer-2{
+    height: 80px;
+    text-align: center;
+}
+
+.footer-2 .footer-content{
+    width: 600px;
+    display: inline-block;
+    position: relative;
+}
+
+.arrow-up {  
+    width: 0;   
+    height: 0;   
+    border-left: 25px solid #000;  /* 左边框的宽 */  
+    border-right: 25px solid yellow; /* 右边框的宽 */  
+    border-bottom: 25px solid red; /* 下边框的长度|高,以及背景色 */  
+    font-size: 0;  
+    line-height: 0;  
+}
+.setting-menu{
+    position: absolute;
+    top:44px;
+    right: 155px;
+    width:68px;
+    border:1px solid #d1d1d1;
+}
+.setting-menu a{
+    display: block;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    color:#000;
+}
+.setting-menu a:hover{
+    background-color: #3385ff;
+    color:#fff;
+}
+.setting-menu:before, .setting-menu:after{
+    position: absolute;
+    top: -5px;
+    left: 30px;
+    content: "";
+    width: 100px;
+    width: 0;   
+    height: 0;   
+    border-left: 5px solid transparent;  /* 左边框的宽 */  
+    border-right: 5px solid transparent; /* 右边框的宽 */  
+    border-bottom: 5px solid #d1d1d1; /* 下边框的长度|高,以及背景色 */  
+    font-size: 0;  
+    line-height: 0; 
+}
+.setting-menu:after{
+    top:-4px;
+    border-bottom-color: #fff;
+}

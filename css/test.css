@@ -1,9 +1,9 @@
 /*辅助测试class*/
 .test-bd{
-    border:0px dashed #ECBE77;
+    border:1px dashed #ECBE77;
 }
 /*方便测试*/
 body{
-	/*padding:10px;*/
+	padding:10px;
 	/*box-sizing:border-box;*/
 }

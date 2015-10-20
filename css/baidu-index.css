@@ -192,6 +192,7 @@ body, p, form, ul, li{
 
 }
 .main-1 .search-box:hover {
+    /*这个效果IE下有bug，需要配合js实现*/
     border-color: #999 transparent #b3b3b3 #999;
 }
 

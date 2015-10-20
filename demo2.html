@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现下拉列表</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			padding: 100px;
+		}
+		.arrow, .arrow-inner{
+			width:0px;
+			height: 0px;
+			border: 5px solid #000;
+			border-color: red transparent;
+			/*border-color: transparent transparent red transparent;*/
+		}
+		.arrow{
+			position: relative;
+		}
+		.arrow-inner{
+			position: absolute;
+			top:-6px;
+			left:-5px;
+			border-bottom-color: white;
+		}
+
+		.dropbox{
+			position: relative;
+		}
+		.dropbox a{
+			
+		}
+		.list-box{
+			position: absolute;
+			top:30px;
+			left:0px;
+		}
+		.list{
+			border:1px solid #ccc;
+			width: 100px;
+	
+			list-style: none;
+		}
+		.list li{
+			text-align: center;
+			line-height: 1.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="dropbox">
+		<a href="#">设置</a>
+		<div class="list-box">
+			<ul class="list">
+				<li>高级设置</li>
+				<li>高级搜索</li>
+				<li>关闭预测</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

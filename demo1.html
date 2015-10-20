@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现下拉列表</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			padding: 100px;
+		}
+		.arrow, .arrow-inner{
+			position: relative;
+			width:0px;
+			height: 0px;
+			border: 50px solid #000;
+			border-color: red black;
+			/*border-color: red transparent transparent transparent;*/
+		}
+		.arrow-inner{
+			position: absolute;
+			top: -65px;
+			left: -50px;
+			border-top-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="arrow">
+		<!-- <div class="arrow-inner"></div> -->
+	</div>
+</body>
+</html>
